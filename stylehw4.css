@@ -1,6 +1,7 @@
 body {
     font-family: Arial; 
 }
+
 .centered {
     text-align: center;
 }
@@ -10,5 +11,10 @@ body {
 }
 
 .column {
-  flex: 50%;
+  float: left;
+  width: 50%;
+}
+
+.space{
+  margin: 10px 0;
 }
