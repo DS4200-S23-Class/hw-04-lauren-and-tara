@@ -17,6 +17,8 @@
 
         <div class="column left">
             <h2>Hi</h2>
+
+
               <script>
                 const dataset = [
                             [ 1, 2 ],
@@ -38,12 +40,11 @@
                    .data(dataset)
                    .enter()
                    .append('circle')
-                   .attr('cx', (item) => {
-                    item[0]
-                   })
-                   .attr('cy', (item) => {
-                    item[1]
-                   })
+                   .attr('cx', (dataPoint) => dataPoint[0])
+                   .attr('cy', (dataPoint) => h - dataPoint[1])
+                   .attr('r', 5)
+
+
                  </script>
         </div>
 
