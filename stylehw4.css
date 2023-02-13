@@ -1,20 +1,35 @@
 body {
-    font-family: Arial; 
+  font-family: Arial;
+  background-color: white;
+  color: black;
 }
 
 .centered {
-    text-align: center;
+  text-align: center;
 }
 
 .row {
   display: flex;
 }
 
-.column {
-  float: left;
-  width: 50%;
+.left {
+  width: 60%;
+  background-color: 'greenyellow';
+}
+
+.right {
+  width: 40%;
+  background-color: 'mediumaquamarine';
 }
 
 .space{
   margin: 10px 0;
+}
+
+svg {
+  width: 200 px;
+}
+
+circle {
+  fill: red;
 }

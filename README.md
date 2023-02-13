@@ -19,10 +19,10 @@ The purpose of this assignment is to practice creating interactive visualization
 
 1. Using the index.html file included in your repo, an *external* stylesheet (no styling should be done inline; it should all be done via external css), and an *external* javascript file (no javascript code should be included in your html file; it should all be done via external js) please do the following: 
 
-   - Make all font on your webpage Arial. 
-   - Add a title: "hw-04".
-   - Add a centered header: "hw-04: Event Handling".
-   - Create two columns on your webpage. The left should take up 60% of the page and the right should take up 40%. 
+   - Make all font on your webpage Arial. *
+   - Add a title: "hw-04". *
+   - Add a centered header: "hw-04: Event Handling". *
+   - Create two columns on your webpage. The left should take up 60% of the page and the right should take up 40%. *
    - In the left column, use SVG's to create a scatter plot with the following points: (1, 2), (2, 4), (6, 2), (9, 9). You should include axes, and your points should be plotted proportionally to distances on your axes, but you do *not* need to add axis labels or titles. 
    - Your visualization should include the following interactive features:
       - If the user hovers over a point, that point should highlight. 

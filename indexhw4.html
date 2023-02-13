@@ -4,30 +4,64 @@
 <head>
     <meta charset=utf-8/>
     <title>hw-04</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylehw4.css">
     <script src="mainhw4.js"></script>
 
 </head>
 
 
-
 <body>
     <h1 class="centered">hw-04: Event Handling</h1>
-
+   
     <div class="row">
-        <div class="column">
-            <ul>
-                <li> Visualization 1 </li>
-            </ul>
+
+        <div class="column left">
+            <h2>Hi</h2>
+              <script>
+                const dataset = [
+                            [ 1, 2 ],
+                            [ 2, 4 ],
+                            [ 6, 2 ],
+                            [ 9, 9 ]
+                         ];
+    
+    
+                const w = 500;
+                const h = 500;
+            
+                const svg = d3.select("body")
+                              .append("svg")
+                              .attr("width", w)
+                              .attr("height", h);
+        
+                svg.selectAll("circle")
+                   .data(dataset)
+                   .enter()
+                   .append('circle')
+                   .attr('cx', (item) => {
+                    item[0]
+                   })
+                   .attr('cy', (item) => {
+                    item[1]
+                   })
+                 </script>
         </div>
-        <div class="column">
-            <ul>
-                <li> Visualization 2 </li>
-            </ul>
+
+        <div class="column right">
+            <h2>Bye</h2>
         </div>
+
     </div>
 
-</div>
+
+<!-- acknowledgments -->
+<h3 class="centered">Acknowledgements</h3>
+<div>
+    <ul>
+        <li><a href="https://www.w3schools.com/tags/tag_br.asp">w3schools</a></li>
+        <li><a href="https://codepen.io/davidcochran/pen/WbWXoa">CodePen</a></li>
+        <li><a href="https://www.tutorialrepublic.com/faq/how-to-vertically-align-an-image-inside-a-div-using-css.php">TutorialRepublic</a></li>
+
 
 </body>
 
