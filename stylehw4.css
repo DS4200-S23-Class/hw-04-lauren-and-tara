@@ -34,12 +34,12 @@ circle {
   fill: red;
 }
 
+circle:hover {
+  fill: #FFFF00 ;
+}
+
 
 ---------------- new
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
 
 .graph .labels.x-labels {
   text-anchor: middle;
