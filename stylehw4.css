@@ -67,7 +67,5 @@ circle:hover {
 }
 
 .changed_border {
-  stroke: black;
-  stroke-width: 5;
+  border:1px solid black;  
 }
-
