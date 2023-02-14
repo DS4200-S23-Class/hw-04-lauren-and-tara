@@ -57,6 +57,14 @@ body {
   stroke-width: 1; 
 }
 
+circle {
+  fill: lightseagreen;
+  opacity: 50%;
+}
+
+circle:hover {
+  fill: red;
+}
 
 /*.space{
   margin: 10px 0;
