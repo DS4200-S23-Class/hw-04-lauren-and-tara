@@ -4,5 +4,15 @@ function changeBorder() {
 } 
 
 function getPoint(d){
-    alert(d.getAttribute("data-value"));
+    x = alert(d.getAttribute("data-value"));
+    return x
 }
+
+
+ //function getPoint(d){
+   // point = d.getAttribute("data-value");
+  //  var paragraph = document.getElementById("p");
+  //  var text = document.createTextNode("point");
+
+   // paragraph.appendChild(text)
+
