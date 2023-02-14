@@ -5,7 +5,7 @@ function changeBorder() {
 
 function getPoint(d){
     x = alert(d.getAttribute("data-value"));
-    return x
+    return x;
 }
 
 function plotPoint(x,y) {
@@ -16,8 +16,6 @@ function plotPoint(x,y) {
   new_point = (x_pos, y_pos);
   return new_point;
   console_log(new_point);
-
-  r
 }
 
   //  var text = document.createTextNode("point");
