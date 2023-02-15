@@ -1,6 +1,6 @@
-function changeBorder(id) {
-  var element = document.getElementById(id);
-  element.classList.toggle("changed_border");
+function changeBorder(d) {
+  stroke = d.style.stroke
+  stroke.toggle("changed_border");
 } 
 
 
@@ -11,8 +11,11 @@ function getPoints(d){
 
 }
 
+
 var btn = document.getElementById('submit');
 btn.addEventListener('click', func);
+
+
 
 function func() {
   console.log(document.getElementById("x").value)
@@ -20,48 +23,25 @@ function func() {
 
 }
 
+
 function plotPoint() {
-  x_c = document.getElementById("x")
-  y_c = document.getElementById("y")
+  x = document.getElementById("x").textContent
+  x_c = Number(x)
+  y= document.getElementById("y").textContent
+  y_c = Number(y)
   x_pos = (50*(x_c-1)) + 100;
   y_pos = 350-(40*(y_c-1));
   new_point = "(" + x_pos +"," + y_pos + ")";
-  return new_point;
   console_log(new_point);
 
-  var radius = 4;
-  var center_x = x_pos;
-  var center_y = y_pos;
-
-  var c = document.getElementById("graph");
-  var ctx = c.getContext("2d");
-
-
-
-  function drawCircle(){
-    ctx.beginPath();
-    ctx.arc(center_x, center_y, radius, 0, 2 * Math.PI);
-    ctx.stroke();
-  }
-
-}
-
-
-function addBorder(id,x1,x2) {
-    let element = document.getElementbyID(id)
-    let xcoord = ele.getAttribute("cx");
-    let ycoord = ele.getAttribute("cy");
-    let x_position = (50*(x-1)) + 100;
-    let y_position = 350-(40*(y-1));
-
-    if (document.getElementById(id).style.fill == "lightseagreen") {
-      document.getElementById(id).style.fill ="none";
-    }
-
-    if (document.getElementById(id).style.fill == "red") {
-      document.getElementById(id).setAttribute("stroke-width", "3px");
-      document.getElementById("p").innerHTML = "Select Point Coordinates:" + "(" + x_position + "," + y_position + ")";
-    } ; 
-
+  frame = document.getElementById("frame");
+  circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  circle.setAttribute("cx", x_pos);
+  circle.setAttribute("cy",y_pos);
+  circle.setAttribute("r", "4");
+  circle.setAttribute("onclick", "getPoints(this)");
+  
+  frame.appendChild(circle);
+  plotPoint();
 
 }

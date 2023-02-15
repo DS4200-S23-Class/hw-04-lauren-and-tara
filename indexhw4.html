@@ -18,6 +18,7 @@
 
             <svg class="graph">
             <g class="grid x-grid" id="xGrid">
+
                 <line x1="90" x2="90" y1="5" y2="371"></line>
             </g>
 
@@ -54,8 +55,8 @@
             <button class="labels y-labels"></button>
 
             <g id="circ" class="data" data-setname="Our first data set">
-                <svg>
-                    <circle onClick="getPoints(this);" cx="100" cy="305" data-value="(1, 2)" r="4"></circle>
+                <svg id="frame">
+                    <circle onClick="getPoints(this); changeBorder(this)" cx="100" cy="305" data-value="(1, 2)" r="4"></circle>
 
                     <circle onClick= "getPoints(this);" cx="150" cy="226" data-value="(2, 4)" r="4"></circle>
 

@@ -73,5 +73,6 @@ circle:hover {
 
 
 .changed_border {
-  stroke: 1px solid black;  
+  stroke-width: 1px;
+  stroke-color: solid black;  
 }
