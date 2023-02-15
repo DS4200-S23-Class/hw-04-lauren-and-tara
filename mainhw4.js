@@ -1,3 +1,4 @@
+
 function changeBorder() {
   var element = document.body;
   element.classList.toggle("changed_border");
@@ -17,37 +18,36 @@ function getPoints(d){
 }
 
 function plotPoint(x,y) {
-  x_position = (50*(x-1)) + 100;
-  y_position = 350-(40*(y-1));
-  x_pos = x_position.toString();
-  y_pos = y_position.toString();
-  new_point = (x_pos, y_pos);
+  x_pos = (50*(x-1)) + 100;
+  y_pos = 350-(40*(y-1));
+  new_point = "(" + x_pos +"," + y_pos + ")";
   return new_point;
   console_log(new_point);
-
-
-  function addBorder(id,x1,x2) {
-    let element = document.getElementbyID(id)
-    let xcoord = ele.getAttribute("cx");
-    let ycoord = ele.getAttribute("cy");
-    let x_position = (50*(x-1)) + 100;
-    let y_position = 350-(40*(y-1));
-
-    if (document.getElementById(id).style.fill == "lightseagreen") {
-      document.getElementById(id).style.fill ="none";
-    }
-
-    if (document.getElementById(id).style.fill == "red") {
-      document.getElementById(id).setAttribute("stroke-width", "3px");
-      document.getElementById("p").innerHTML = "Select Point Coordinates:" + "(" + x_position + "," + y_position + ")";
-    } ;
-
-
-
 }
 
-  //  var text = document.createTextNode("point");
 
-   // paragraph.appendChild(text)
+function addBorder(id,x1,x2) {
+  let element = document.getElementbyID(id)
+  let xcoord = ele.getAttribute("cx");
+  let ycoord = ele.getAttribute("cy");
+  let x_position = (50*(x-1)) + 100;
+  let y_position = 350-(40*(y-1));
+
+  if (document.getElementById(id).style.fill == "lightseagreen") {
+    document.getElementById(id).style.fill ="none";
+  }
+
+  if (document.getElementById(id).style.fill == "red") {
+    document.getElementById(id).setAttribute("stroke-width", "3px");
+    document.getElementById("p").innerHTML = "Select Point Coordinates:" + "(" + x_position + "," + y_position + ")";
+  } ;
+
+
+
+// }
+
+//   //  var text = document.createTextNode("point");
+
+//    // paragraph.appendChild(text)
 
 
