@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylehw4.css">
 
 </head>
-
+ 
 
 <body>
     <h1 class="centered">hw-04: Event Handling</h1>
@@ -71,11 +71,10 @@
         <div class="column right">
             <p id="p">Points Selected:</p>
 
-            <canvas id="myCanvas" width="200" height="100"></canvas>
             <h4>Input X coordinate and Y coordinate up to 9</h4>
-            <input type="text" id="x">
-            <input type="text" id="y">
-            <button id="subButton" type='button' onclick="plotPoint()">Submit</button>
+            <input type="number" id="x" name="number" min="1" max="9">
+            <input type="number" id="y" name="number" min="1" max="9">
+            <input type="submit" id="submit">
         </div>
 
     </div>
