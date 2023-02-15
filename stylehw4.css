@@ -28,6 +28,7 @@ body {
 
 .graph .labels.y-labels {
   text-anchor: end;
+
 }
 
 .graph {
@@ -65,6 +66,8 @@ circle {
 circle:hover {
   fill: red;
 }
+
+
 
 .changed_border {
   stroke:1px solid black;  
