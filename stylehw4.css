@@ -53,6 +53,10 @@ body {
   fill: black;
 }
 
+.myCanvas {
+  border: 1px solid black;
+}
+
 .data {
   fill: red;
   stroke-width: 1; 
@@ -68,7 +72,6 @@ circle:hover {
 }
 
 
-
 .changed_border {
-  stroke:1px solid black;  
+  stroke: 1px solid black;  
 }

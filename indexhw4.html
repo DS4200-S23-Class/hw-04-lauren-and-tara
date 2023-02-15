@@ -5,7 +5,6 @@
     <meta charset=utf-8/>
     <title>hw-04</title>
     <link rel="stylesheet" href="stylehw4.css">
-    <script src="mainhw4.js"></script>
 
 </head>
 
@@ -16,7 +15,6 @@
     <div class="row">
 
         <div class="column left">
-            <h2>Hi</h2>
 
             <svg class="graph">
             <g class="grid x-grid" id="xGrid">
@@ -55,13 +53,16 @@
 
             <button class="labels y-labels"></button>
 
-            <g class="data" data-setname="Our first data set">
-                <svg >
-                <circle onClick="getPoints(this)" cx="100" cy="305" data-value="(1, 2)" r="4"></circle>
-                <circle id="circ" onClick= "getPoints(this)" cx="150" cy="226" data-value="(2, 4)" r="4"></circle>
-                <circle cx="350" onClick= "getPoints(this);" cy="305" data-value="(6, 2)" r="4"></circle>
-                <circle cx="500" onClick= "getPoints(this);" cy="29" data-value="(9, 9)" r="4"></circle>
-            </svg>
+            <g id="circ" class="data" data-setname="Our first data set">
+                <svg>
+                    <circle onClick="getPoints(this);" cx="100" cy="305" data-value="(1, 2)" r="4"></circle>
+
+                    <circle onClick= "getPoints(this);" cx="150" cy="226" data-value="(2, 4)" r="4"></circle>
+
+                    <circle onClick= "getPoints(this);" cx="350" cy="305" data-value="(6, 2)" r="4"></circle>
+
+                    <circle onClick= "getPoints(this);" cx="500" cy="29" data-value="(9, 9)" r="4"></circle>
+                </svg>
             </g>
 
 
@@ -69,6 +70,12 @@
 
         <div class="column right">
             <p id="p">Points Selected:</p>
+
+            <canvas id="myCanvas" width="200" height="100"></canvas>
+            <h4>Input X coordinate and Y coordinate up to 9</h4>
+            <input type="text" id="x">
+            <input type="text" id="y">
+            <button id="subButton" type='button' onclick="plotPoint()">Submit</button>
         </div>
 
     </div>
@@ -83,6 +90,7 @@
         <li><a href="https://codepen.io/jonespen/pen/DddKNz">codepen</a></li>
 
 
+<script src="mainhw4.js"></script>
 </body>
 
 </html>
