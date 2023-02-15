@@ -1,12 +1,7 @@
-function changeBorder() {
-  var element = document.body;
+function changeBorder(id) {
+  var element = document.getElementById(id);
   element.classList.toggle("changed_border");
 } 
-
-function getPoint(d){
-    x = alert(d.getAttribute("data-value"));
-    return x;
-}
 
 
 function getPoints(d){
@@ -17,16 +12,30 @@ function getPoints(d){
 }
 
 function plotPoint(x,y) {
-  x_position = (50*(x-1)) + 100;
-  y_position = 350-(40*(y-1));
-  x_pos = x_position.toString();
-  y_pos = y_position.toString();
-  new_point = (x_pos, y_pos);
+  x_pos = (50*(x-1)) + 100;
+  y_pos = 350-(40*(y-1));
+  new_point = "(" + x_pos +"," + y_pos + ")";
   return new_point;
   console_log(new_point);
 
+  var radius = 4;
+  var center_x = x_pos;
+  var center_y = y_pos;
 
-  function addBorder(id,x1,x2) {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+
+  function drawCircle(){
+    ctx.beginPath();
+    ctx.arc(center_x, center_y, radius, 0, 2 * Math.PI);
+    ctx.stroke();
+}
+
+
+}
+
+
+function addBorder(id,x1,x2) {
     let element = document.getElementbyID(id)
     let xcoord = ele.getAttribute("cx");
     let ycoord = ele.getAttribute("cy");
@@ -45,9 +54,3 @@ function plotPoint(x,y) {
 
 
 }
-
-  //  var text = document.createTextNode("point");
-
-   // paragraph.appendChild(text)
-
-
